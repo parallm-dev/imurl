@@ -1,0 +1,25 @@
+[workspace]
+
+[package]
+name = "imurl"
+version = "0.0.1"
+edition = "2021"
+description = "Immutable `url::Url` wrapper"
+documentation = "https://docs.rs/imurl/docs"
+repository = "https://github.com/parallm-dev/imurl"
+authors = ["David Maple <david@parallm.dev>"]
+license = "MIT"
+
+[dependencies]
+imstr = "0.2.0"
+url = { version = "2.5.2" }
+anyhow = "1.0.89"
+serde = { version = "1.0.210", features = ["derive"], optional = true }
+
+[dev-dependencies]
+criterion = "0.5.1"
+peg = "0.8.4"
+
+[[test]]
+name = "test"
+path = "tests/test_imurl.rs"
